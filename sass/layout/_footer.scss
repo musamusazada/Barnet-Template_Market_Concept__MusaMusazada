@@ -1,0 +1,156 @@
+footer {
+    margin-top: 150px;
+    background-image: url(http://html.commonsupport.xyz/2019/Barnet/images/background/1.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #283a6e;
+    background-blend-mode: multiply;
+    .container {
+        color: $white;
+        .row.flex-column {
+            position: relative;
+            .breadcrumb {
+                position: absolute;
+                top: -80px;
+                background-image: url(http://html.commonsupport.xyz/2019/Barnet/images/background/shape-1.jpg);
+                background-repeat: no-repeat;
+                background-size: cover;
+                padding: 60px 50px 31px;
+                display: flex;
+                justify-content: space-around;
+                h2 {
+                    cursor: pointer;
+                    align-self: center;
+                    transition: 0.5s;
+                    &:hover {
+                        text-shadow: 2px 0 0 #000, 4px 0 0 red;
+                    }
+                }
+                .input-box {
+                    margin-top: 20px;
+                    display: flex;
+                    gap: 20px;
+                    flex-wrap: wrap;
+                    input {
+                        @extend %button-reset;
+                        padding: 20px 40px;
+                        background: rgba(255, 255, 255, 0.356);
+                        &::placeholder {
+                            color: #fff;
+                        }
+                    }
+                    button {
+                        @extend %button-reset;
+                        padding: 20px 40px;
+                        color: black;
+                        background: white;
+                        transition: 0.5s;
+                        &:hover {
+                            color: white;
+                            background: #000;
+                        }
+                    }
+                }
+            }
+        }
+        .info-box {
+            flex-wrap: wrap;
+            margin-top: 250px;
+            padding-bottom: 50px;
+            .image-field {
+                padding-right: 30px;
+                img {
+                    @extend %margin-bottom;
+                }
+                p {
+                    line-height: 30px;
+                    font-size: 0.9rem;
+                }
+            }
+            .social-field {
+                padding-right: 30px;
+                h4 {
+                    @extend %margin-bottom;
+                    transition: 0.5s;
+                }
+                .post {
+                    margin-bottom: 10px;
+                    .profile {
+                        cursor: pointer;
+                        &:hover h4 {
+                            color: $red;
+                        }
+                        &:hover .fa-twitter {
+                            color: cyan;
+                        }
+                        display: flex;
+                        .fa-twitter {
+                            transition: 0.5s;
+                            margin-right: 10px;
+                            line-height: 30px;
+                            font-size: 1.3rem;
+                        }
+                        .wrapper {
+                            font-size: 0.9rem;
+                            h4 {
+                                margin-bottom: 0;
+                            }
+                            p {
+                                line-height: 25px;
+                                color: gray;
+                            }
+                        }
+                    }
+                    .post-text {
+                        margin-top: -15px;
+                        font-size: 0.9rem;
+                        span {
+                            color: $red;
+                        }
+                    }
+                }
+            }
+            .article-field {
+                padding-right: 30px;
+                font-size: 0.9rem;
+                h4 {
+                    @extend %margin-bottom;
+                }
+                .article {
+                    .date {
+                        line-height: 34px;
+                        p {
+                            color: gray;
+                            margin-bottom: 0;
+                        }
+                        h5 {
+                            font-size: 1rem;
+                            margin-top: 0;
+                        }
+                    }
+                }
+            }
+            .contact-field {
+                font-size: 0.9rem;
+                h4 {
+                    @extend %margin-bottom;
+                }
+                .address-field {
+                    p {}
+                    .icon-box {
+                        .fa-users {
+                            font-size: 2.4rem;
+                            cursor: pointer;
+                            margin-left: 10px;
+                            transition: 0.5s;
+                            &:hover {
+                                color: $red;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

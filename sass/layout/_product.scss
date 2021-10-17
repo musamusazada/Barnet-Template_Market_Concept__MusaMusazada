@@ -1,0 +1,150 @@
+@import '../abstracts/variables',
+'../abstracts/extends';
+#product {
+    .container {
+        .row {
+            .col-12 {
+                .product {
+                    border-bottom: 1px solid rgba(189, 182, 182, 0.63);
+                    padding-bottom: 40px;
+                    display: flex;
+                    flex-wrap: wrap;
+                    .product__preview {
+                        margin: 20px 0;
+                        .img-box {
+                            img {
+                                max-width: 100%;
+                                object-fit: cover;
+                            }
+                        }
+                        .button-box {
+                            margin-top: 40px;
+                            .desc-button {
+                                margin-right: 15px;
+                                @extend %button-reset;
+                                transition: 0.5s;
+                                &:hover {
+                                    background: #000;
+                                }
+                            }
+                            .review-button {
+                                @extend %button-reset;
+                                background: white !important;
+                                color: black !important;
+                                border: 1px solid gray;
+                            }
+                        }
+                    }
+                    .product__description {
+                        margin: 20px 0;
+                        margin-left: 20px;
+                        h1 {}
+                        h3 {
+                            color: $red;
+                        }
+                        p {
+                            color: gray;
+                            line-height: 30px;
+                        }
+                        .button-box {
+                            margin: 25px 0;
+                            input[type="number"] {
+                                margin-right: 10px;
+                                width: 100px;
+                                padding: 10px;
+                                outline: none;
+                            }
+                            button {
+                                @extend %button-reset;
+                                transition: 0.5s;
+                                &:hover {
+                                    background: #000;
+                                }
+                            }
+                        }
+                        .category {
+                            font-size: 1.1rem;
+                            span {
+                                color: rgb(34, 85, 224);
+                            }
+                        }
+                        .icon-box {
+                            margin-top: 20px;
+                            .fa-users {
+                                margin-right: 15px;
+                                font-size: 1.8rem;
+                                transition: 0.5s;
+                                cursor: pointer;
+                                &:hover {
+                                    color: $red;
+                                }
+                            }
+                        }
+                    }
+                }
+                .product-description {
+                    margin: 20px 0;
+                    h1 {
+                        margin-bottom: 10px;
+                    }
+                    p {
+                        color: gray;
+                    }
+                }
+                .related-products {
+                    h1 {
+                        margin: 30px 0;
+                    }
+                    .row {
+                        .custom-card {
+                            padding: 0 5px;
+                            cursor: pointer;
+                            &:hover .text-box .overlay {
+                                opacity: 1;
+                                top: -50px;
+                            }
+                            .img-box {
+                                img {
+                                    width: 100%;
+                                }
+                            }
+                            .text-box {
+                                position: relative;
+                                h4 {
+                                    font-weight: 300;
+                                }
+                                p {
+                                    font-weight: bold;
+                                }
+                                .overlay {
+                                    display: flex;
+                                    transition: 0.5s;
+                                    opacity: 0;
+                                    position: absolute;
+                                    left: 50%;
+                                    top: 20px;
+                                    transform: translateX(-50%) translateY(-50%);
+                                    .fa-heart {
+                                        margin-left: 10px;
+                                        background: #fff;
+                                        border-radius: 50%;
+                                        width: 50px;
+                                        height: 50px;
+                                        display: flex;
+                                        justify-content: center;
+                                        align-items: center;
+                                        transition: 0.5s;
+                                        &:hover {
+                                            color: #fff;
+                                            background: $red;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
