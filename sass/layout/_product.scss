@@ -93,7 +93,28 @@
                 }
                 .related-products {
                     h1 {
-                        margin: 30px 0;
+                        margin: 30px 0 80px 0;
+                        position: relative;
+                        &::before {
+                            content: '';
+                            display: inline-block;
+                            position: absolute;
+                            bottom: -20px;
+                            left: 0px;
+                            height: 2px;
+                            width: 70px;
+                            background: $red;
+                        }
+                        &::after {
+                            content: '';
+                            display: inline-block;
+                            position: absolute;
+                            bottom: -25px;
+                            left: 30px;
+                            height: 2px;
+                            width: 70px;
+                            background: $red;
+                        }
                     }
                     .row {
                         .custom-card {

@@ -23,12 +23,12 @@ footer {
                     cursor: pointer;
                     align-self: center;
                     transition: 0.5s;
+                    margin-bottom: 20px;
                     &:hover {
                         text-shadow: 2px 0 0 #000, 4px 0 0 red;
                     }
                 }
                 .input-box {
-                    margin-top: 20px;
                     display: flex;
                     gap: 20px;
                     flex-wrap: wrap;
